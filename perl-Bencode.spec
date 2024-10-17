@@ -7,7 +7,7 @@ Release:	5
 Summary:	BitTorrent serialization format
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/Bencode/
+URL:		https://search.cpan.org/dist/Bencode/
 Source0:	http://www.cpan.org/authors/id/A/AR/ARISTOTLE/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
