@@ -1,14 +1,12 @@
 %define upstream_name Bencode
-%define upstream_version 1.4
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	1.4
+Release:	6
 Summary:	BitTorrent serialization format
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/Bencode/
-Source0:	http://www.cpan.org/authors/id/A/AR/ARISTOTLE/%{upstream_name}-%{upstream_version}.tar.gz
+URL:		https://metacpan.org/dist/Bencode/
+Source0:	http://www.cpan.org/authors/id/A/AR/ARISTOTLE/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ This module implements the BitTorrent bencode serialization format as
 described in http://www.bittorrent.org/protocol.html.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
