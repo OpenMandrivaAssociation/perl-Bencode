@@ -2,7 +2,7 @@
 %define upstream_version 1.502
 Name:		perl-%{upstream_name}
 Version:	1.502
-Release:	6
+Release:	7
 Summary:	BitTorrent serialization format
 License:	GPL+ or Artistic
 Group:		Development/Perl
@@ -10,6 +10,7 @@ URL:		https://metacpan.org/dist/Bencode/
 Source0:	https://cpan.metacpan.org/authors/id/A/AR/ARISTOTLE/Bencode-1.502.tar.gz
 
 BuildRequires:	make
+BuildRequires:	perl(Exporter::Tidy)
 BuildRequires:	perl-devel
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(Exporter)
@@ -30,6 +31,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %check
 # soft: do not fail package on test failures
 set +e
+:  # soft check
 :  # soft check
 %make test || :
 
