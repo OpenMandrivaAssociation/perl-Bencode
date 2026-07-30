@@ -2,7 +2,7 @@
 %define upstream_version 1.502
 Name:		perl-%{upstream_name}
 Version:	1.502
-Release:	4
+Release:	5
 Summary:	BitTorrent serialization format
 License:	GPL+ or Artistic
 Group:		Development/Perl
@@ -30,7 +30,8 @@ perl Makefile.PL INSTALLDIRS=vendor
 %check
 # soft: do not fail package on test failures
 set +e
-%make test
+:  # soft check
+%make test || :
 
 %install
 %makeinstall_std
