@@ -1,12 +1,13 @@
 %define upstream_name Bencode
+%define upstream_version 1.502
 Name:		perl-%{upstream_name}
-Version:	1.4
-Release:	6
+Version:	1.502
+Release:	1
 Summary:	BitTorrent serialization format
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/Bencode/
-Source0:	http://www.cpan.org/authors/id/A/AR/ARISTOTLE/%{upstream_name}-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AR/ARISTOTLE/Bencode-1.502.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
