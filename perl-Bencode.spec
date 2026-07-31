@@ -2,7 +2,7 @@
 %define upstream_version 1.502
 Name:		perl-%{upstream_name}
 Version:	1.502
-Release:	20
+Release:	21
 Summary:	BitTorrent serialization format
 License:	GPL+ or Artistic
 Group:		Development/Perl
