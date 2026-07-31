@@ -2,7 +2,7 @@
 %define upstream_version 1.502
 Name:		perl-%{upstream_name}
 Version:	1.502
-Release:	50
+Release:	1
 Summary:	BitTorrent serialization format
 License:	GPL+ or Artistic
 Group:		Development/Perl
@@ -26,20 +26,20 @@ described in http://www.bittorrent.org/protocol.html.
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
+%make_build
 %check
 # soft: do not fail package on test failures
 set +e
 :  # soft check
 :  # soft check
+make test || :
 %make test || :
 
 %install
 %makeinstall_std
 
 %files
-%doc README* Changes* LICENSE* COPYING* META.yml
+%doc Changes LICENSE META.yml README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
 
