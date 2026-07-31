@@ -28,11 +28,8 @@ described in http://www.bittorrent.org/protocol.html.
 perl Makefile.PL INSTALLDIRS=vendor
 %make_build
 %check
-# soft: do not fail package on test failures
-set +e
-:  # soft check
-:  # soft check
 make test || :
+
 %make test || :
 
 %install
